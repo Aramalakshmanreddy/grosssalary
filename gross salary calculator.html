@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+         .ram{
+                width: 40%;
+                background-color: green;
+                margin: auto;
+                border: 3px solid blue;
+            }
+         table  tr td{
+             color:white;
+             border-collapse: collapse;
+            
+         }
+         #lakshman{
+              border-collapse: collapse;
+              width: 40%;
+                background-color: green;
+                margin: auto;
+                border: 3px solid blue;
+         }
+         .lucky{
+             background:green;
+             color: white;
+             height: 30px;
+             width: 100px;
+             
+         }
+         .rama{
+             color: green;
+         }
+        </style>
+        <script type="text/javascript">
+        function getresult()
+        {
+            var i=document.getElementById("i").value;
+            var n=document.getElementById("n").value;
+            var s=parseInt(document.getElementById("s").value);
+            var d=s*40/100;
+            var h=s*8/100;
+            var p=s*4/100;
+            var gs=d+h+p;
+
+            var c="<center><table border=1 cellspacing=10 cellpadding=10>"; 
+                 c=c+"<tr><td>id</td><td>"+i+"</td></tr>";
+                c=c+"<tr><td>name</td><td>"+n+"</td></tr>";
+                c=c+"<tr><td>salary</td><td>"+s+"</td></tr>";
+                c=c+"<tr><td>da</td><td>"+d+"</td></tr>";
+                c=c+"<tr><td>hra</td><td>"+h+"</td></tr>";
+                c=c+"<tr><td>pa</td><td>"+p+"</td></tr>";
+                c=c+"<tr><td>gsal</td><td>"+gs+"</td></tr>";
+
+
+                document.getElementById("lakshman").innerHTML=c;
+            }
+         </script>
+    </head>
+    <body style = background-color:red;>
+        <div class="ram">
+        <center>
+        <table>
+            
+            <tr>
+                <td>ENTER ID  </td>
+                <td><input class="rama" type="text" id="i"></td>
+            </tr>
+            <br>
+            <tr>
+                <td>ENTER NAME  </td>
+                <td><input class="rama" type="text" id="n"></td>
+            </tr>
+            
+            <tr>
+                <td>ENTER SALARY  </td>
+                <td><input class="rama" type="text" id="s"></td>
+            </tr>
+            
+            
+            <tr>
+                <td><input class="lucky" type="button" value="SUBMIT" onClick="getresult()"></td>
+            </tr>
+        </table>
+        
+        
+        </div>
+        <br><br>
+        <div id="lakshman"></div>
+    </body>
+</html>
